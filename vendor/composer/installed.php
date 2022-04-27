@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v9.1.5',
-        'version' => '9.1.5.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '1801ed3bd97784675856407c1afb6ab3b1cb7e09',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -165,6 +165,15 @@
             'aliases' => array(),
             'reference' => '8c3d0a3f6af734494ad8f6fbbee0ba92422859f3',
             'dev_requirement' => true,
+        ),
+        'haydenpierce/class-finder' => array(
+            'pretty_version' => '0.4.3',
+            'version' => '0.4.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../haydenpierce/class-finder',
+            'aliases' => array(),
+            'reference' => 'd6c68f386c764674c59ee336d1dfca35aada5f90',
+            'dev_requirement' => false,
         ),
         'illuminate/auth' => array(
             'dev_requirement' => false,
@@ -364,6 +373,15 @@
                 0 => '*',
             ),
         ),
+        'laragraph/utils' => array(
+            'pretty_version' => 'v1.4.0',
+            'version' => '1.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laragraph/utils',
+            'aliases' => array(),
+            'reference' => '43b522c37706fa4867dff9c404cac5af4d825c7d',
+            'dev_requirement' => false,
+        ),
         'laravel/framework' => array(
             'pretty_version' => 'v9.9.0',
             'version' => '9.9.0.0',
@@ -374,12 +392,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v9.1.5',
-            'version' => '9.1.5.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '1801ed3bd97784675856407c1afb6ab3b1cb7e09',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -452,6 +470,15 @@
             'install_path' => __DIR__ . '/../league/mime-type-detection',
             'aliases' => array(),
             'reference' => 'ff6248ea87a9f116e78edd6002e39e5128a0d4dd',
+            'dev_requirement' => false,
+        ),
+        'mll-lab/laravel-graphql-playground' => array(
+            'pretty_version' => 'v2.6.0',
+            'version' => '2.6.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mll-lab/laravel-graphql-playground',
+            'aliases' => array(),
+            'reference' => 'f3c56d80220211cdb736356ffe9a14ebcfc0ec88',
             'dev_requirement' => false,
         ),
         'mockery/mockery' => array(
@@ -531,6 +558,15 @@
             'aliases' => array(),
             'reference' => 'c379636dc50e829edb3a8bcb944a01aa1aed8f25',
             'dev_requirement' => true,
+        ),
+        'nuwave/lighthouse' => array(
+            'pretty_version' => 'v5.48.1',
+            'version' => '5.48.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nuwave/lighthouse',
+            'aliases' => array(),
+            'reference' => '7c8b2b05443b7fb8b337c8db45af4d8005802054',
+            'dev_requirement' => false,
         ),
         'phar-io/manifest' => array(
             'pretty_version' => '2.0.3',
@@ -736,8 +772,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -1223,6 +1259,15 @@
             'reference' => '38358405ae948963c50a3aae3dfea598223ba15e',
             'dev_requirement' => false,
         ),
+        'thecodingmachine/safe' => array(
+            'pretty_version' => 'v2.1.3',
+            'version' => '2.1.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../thecodingmachine/safe',
+            'aliases' => array(),
+            'reference' => 'c4919cde04a0974e81340c3ed62bd27c1889005b',
+            'dev_requirement' => false,
+        ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',
             'version' => '1.2.1.0',
@@ -1266,6 +1311,15 @@
             'install_path' => __DIR__ . '/../webmozart/assert',
             'aliases' => array(),
             'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
+            'dev_requirement' => false,
+        ),
+        'webonyx/graphql-php' => array(
+            'pretty_version' => 'v14.11.6',
+            'version' => '14.11.6.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../webonyx/graphql-php',
+            'aliases' => array(),
+            'reference' => '6070542725b61fc7d0654a8a9855303e5e157434',
             'dev_requirement' => false,
         ),
     ),
