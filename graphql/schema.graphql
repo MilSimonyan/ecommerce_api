@@ -6,7 +6,15 @@ type Mutation{
     updateProduct(id: ID!, name: String, description: String): Product!
     deleteProduct(id: ID!): Product!
 
+<<<<<<< HEAD
     createCategory(input: CategoryCreateInput  @spread ) : Category
+=======
+    createAttribute(input: AttributeCreateInput  @spread): Attribute
+    updateAttribute(input: AttributeUpdateInput @spread): Attribute
+    deleteAttribute(id: ID!): Attribute
+
+    createCategory(input: CategoryCreateInput  @spread) : Category
+>>>>>>> fdbc6cfecd289887e683d55c181d18aae09e5491
     updateCategory(id: ID! name: String, description: String): Category
     deleteCategory(id: ID!) : Category
 }
@@ -17,14 +25,31 @@ type Product{
     description: String!
 }
 
+type Attribute {
+    id: ID!
+    name: String!
+    type: String!
+}
+
+input AttributeCreateInput {
+    name: String! @rules(apply: ["required", "min:2"])
+    type: String! @rules(apply: ["required", "min:2"])
+}
+
+input AttributeUpdateInput{
+    id: ID!,
+    name: String @rules(apply: ["required", "min:2"]),
+    type: String @rules(apply: ["required", "min:2"])
+}
+
 type Query {
-
-    #    Finde category
+    #    Find category, attribute
     category(id: ID! @eq): Category @find
-    #    All categories
+    attribute(id: ID! @eq): Attribute @find
+
+    #    All categories, attributes
     categories: [Category!]
-
-
+    attributes: [Attribute!]
 }
 
 
