@@ -3,6 +3,7 @@
 namespace App\GraphQL\Mutations;
 
 use App\Models\Category;
+use function PHPUnit\Framework\isNull;
 
 final class DeleteCategory
 {
@@ -10,14 +11,14 @@ final class DeleteCategory
      * @param  null  $_
      * @param  array{}  $args
      */
-    public function __invoke($_, array $args)
+    public function __invoke($_, array $args): ?Category
     {
-        $category = Category::find($args['id']);
-        $status = $category->delete();
+        if($category = Category::find($args['id'])) {
+            $category->delete();
+        }
 
-        return [
-           'status' => $status,
-           'message' => 'Category Deleted!!'
-        ];
+        return $category;
+
     }
+
 }
