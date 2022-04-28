@@ -8,6 +8,48 @@ type Mutation{
 }
 
 type Product{
+id: ID!
+name: String!
+description: String!
+}
+type Mutation {
+    createCategory(input: CategoryCreateInput  @spread) : Category
+    updateCategory(id: ID! name: String, description: String): Category
+    deleteCategory(id: ID!) : DeleteCategoryResponse
+}
+
+type Query {
+
+#    Finde category
+    category(id: ID! @eq): Category @find
+#    All categories
+    categories: [Category!]
+
+
+}
+
+
+type DeleteCategoryResponse {
+    status: String!
+    message: String!
+}
+
+input CategoryCreateInput {
+    id: ID
+    name: String!
+    description: String!
+}
+
+"Account of a person who utilizes this application."
+
+type Category {
+    id: ID!
+    name: String!
+    description: String!
+}
+
+type User {
+    "Unique primary key."
     id: ID!
     name: String!
     description: String!
