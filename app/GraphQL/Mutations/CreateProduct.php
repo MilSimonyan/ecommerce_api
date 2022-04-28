@@ -25,8 +25,7 @@ final class CreateProduct
             'description' => 'min:5|max:500'
         ]);
 
-        $product = new Product();
-        $product->create([
+        $product = Product::create([
             'name' => $args['name'],
             'description' => $args['description']
         ]);
