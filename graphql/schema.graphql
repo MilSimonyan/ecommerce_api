@@ -6,15 +6,11 @@ type Mutation{
     updateProduct(id: ID!, name: String, description: String): Product!
     deleteProduct(id: ID!): Product!
 
-<<<<<<< HEAD
-    createCategory(input: CategoryCreateInput  @spread ) : Category
-=======
     createAttribute(input: AttributeCreateInput  @spread): Attribute
     updateAttribute(input: AttributeUpdateInput @spread): Attribute
     deleteAttribute(id: ID!): Attribute
 
     createCategory(input: CategoryCreateInput  @spread) : Category
->>>>>>> fdbc6cfecd289887e683d55c181d18aae09e5491
     updateCategory(id: ID! name: String, description: String): Category
     deleteCategory(id: ID!) : Category
 }
