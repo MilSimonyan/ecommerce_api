@@ -10,10 +10,10 @@ final class DeleteProduct
      * @param  null  $_
      * @param  array{}  $args
      */
-    public function __invoke($_, array $args): Product
+    public function __invoke($_, array $args): ?Product
     {
         if($product = Product::find($args['id'])){
-            $product->delete($args['id']);
+            $product->delete();
         }
        return $product;
     }
