@@ -5,6 +5,7 @@ namespace App\GraphQL\Mutations;
 
 use App\Models\Category;
 
+use App\Models\Product;
 use Illuminate\Validation\Factory;
 
 final class CreateCategory
@@ -34,6 +35,8 @@ final class CreateCategory
             'description' => $args['description'],
         ]);
 
+        $product = Product::find($args['products']);
+        $category->products()->attach($product);
         return $category;
     }
 }
