@@ -2,11 +2,11 @@
 scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
 type Mutation{
-    createProduct(name: String!, description: String!, categories: [Int]): Product
-    updateProduct(id: ID!, name: String!, description: String!): Product!
+    createProduct(name: String!, description: String!): Product
+    updateProduct(id: ID!, name: String, description: String): Product!
     deleteProduct(id: ID!): Product!
 
-    createCategory(input: CategoryCreateInput  @spread) : Category
+    createCategory(input: CategoryCreateInput  @spread ) : Category
     updateCategory(id: ID! name: String, description: String): Category
     deleteCategory(id: ID!) : Category
 }
@@ -36,6 +36,7 @@ type DeleteCategoryResponse {
 input CategoryCreateInput {
     name: String!
     description: String!
+    products: [Int]
 }
 
 "Account of a person who utilizes this application."

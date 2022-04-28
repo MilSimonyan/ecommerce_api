@@ -29,8 +29,7 @@ final class CreateProduct
             'name' => $args['name'],
             'description' => $args['description']
         ]);
-        $category = Category::find($args['categories']);
-        $product->categories()->attach($category);
+
         return $product;
     }
 }
