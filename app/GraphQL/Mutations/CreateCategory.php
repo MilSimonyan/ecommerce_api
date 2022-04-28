@@ -29,10 +29,10 @@ final class CreateCategory
             'description' => 'required|max:255',
         ]);
 
-        $category = new Category();
-        $category->name = $args['name'];
-        $category->description = $args['description'];
-        $category->save();
+        $category = Category::create([
+            'name' => $args['name'],
+            'description' => $args['description'],
+        ]);
 
         return $category;
     }
