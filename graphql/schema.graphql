@@ -1,19 +1,27 @@
 "A datetime string with format `Y-m-d H:i:s`, e.g. `2018-05-23 13:43:32`."
 scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTime")
 
-"Indicates what fields are available at the top level of a query operation."
+type Mutation{
+    createProduct(name: String!, description: String!, categories: [Int]): Product
+    updateProduct(id: ID!, name: String!, description: String!): Product!
+    deleteProduct(id: ID!): Product!
 
-type Mutation {
     createCategory(input: CategoryCreateInput  @spread) : Category
     updateCategory(id: ID! name: String, description: String): Category
     deleteCategory(id: ID!) : Category
 }
 
+type Product{
+    id: ID!
+    name: String!
+    description: String!
+}
+
 type Query {
 
-#    Finde category
+    #    Finde category
     category(id: ID! @eq): Category @find
-#    All categories
+    #    All categories
     categories: [Category!]
 
 
@@ -26,7 +34,6 @@ type DeleteCategoryResponse {
 }
 
 input CategoryCreateInput {
-    id: ID
     name: String!
     description: String!
 }
@@ -42,19 +49,6 @@ type Category {
 type User {
     "Unique primary key."
     id: ID!
-
-    "Non-unique name."
     name: String!
-
-    "Unique email address."
-    email: String!
-
-    "When the email was verified."
-    email_verified_at: DateTime
-
-    "When the account was created."
-    created_at: DateTime!
-
-    "When the account was last updated."
-    updated_at: DateTime!
+    description: String!
 }
